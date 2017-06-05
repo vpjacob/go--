@@ -50,3 +50,60 @@ func main() {
 	// 会报错
 }
 
+
+
+
+
+
+
+// 常量
+// 一般使用常量来代替魔法数字
+func main() {
+	const a = 200
+
+	const b,c = 200
+	const s = "hello world"
+	// 不会报错，没使用的b，c，s不会报错
+	{
+		const a = 300
+		println(x)  // 结果是300
+		// 在不同作用域，常量的值会变
+	}
+}
+
+import "fmt"
+func main() {
+	const {
+		x uint16 = 11
+		y
+		s = "av"
+		z
+	}
+	// x 和y，s和z数值和类型相同
+}
+
+
+// 枚举
+const {
+	x = iota //0
+	y		//1
+	z		//2
+
+}
+
+const {
+	_,_ = iota,iota * 10  //0,0 * 10
+	a,b						//1,1 * 10
+	c,d						//2,2*10
+}
+
+const {
+	a = iota 	//0  
+	b			//1
+	c = 100		//100  	中断
+	d			//100	和上面的一样
+	e = iota    //4		恢复，但是包括cd，
+	f 			//5		
+}
+
+
