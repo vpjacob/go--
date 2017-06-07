@@ -38,3 +38,37 @@ func a() {
 	}
 	println(b)
 }
+
+
+// switchCase
+// 可以穿透，但是不能作为最后一个，穿透后面得有case，可以使用表达式，不能有重复的case条件
+func main() {
+	switch x := 5;x{
+	case 1:
+		x += 10
+		println(x)
+	case 5:
+	case 6:
+		x += 10
+		println(x)
+		fallthrough
+	case 7:
+		x += 4
+	}
+}
+
+
+//for 循环
+ for i := 0; i < count; i++ {
+	x ++
+}
+
+for x < 10{
+	x ++//相当于while x<10{}
+}
+
+for {
+	break//相当于while ture{}  for ture{}
+}
+
+// break continue 前者中断switch for select 后者只能用在for循环，结束这一轮的循环
